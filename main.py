@@ -12,7 +12,7 @@ def main():
             request = requests.get(url)
             responseCode = request.status_code
             responseUrl = request.url
-            # Sometimes the website may redirect you to a 404 response page, in this case, request status code will be 200 (cause de redirect went well). 
+            # Sometimes the website may redirect you to a 404 response page, in this case, request status code will be 200 (cause the redirect went well). 
             # This check for the redirect url to check if it's a 404 page and change it's response code
             if '404' in responseUrl or ('not' in responseUrl and 'found' in responseUrl):
                 responseCode = 404
