@@ -30,6 +30,7 @@ def log(message):
     log.write(message)
     # Close the log file
     log.close()
+    print(message)
 
 if __name__ == '__main__':
     main()
